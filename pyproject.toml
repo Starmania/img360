@@ -1,0 +1,34 @@
+[project]
+name = "img360-recadrer"
+version = "0.1.0"
+description = "`img360_recadrer` is a Python tool for batch processing and recentering 360-degree images. It provides both a command-line interface and a graphical user interface for ease of use."
+authors = [
+    {name = "Starmania",email = "wycvhrt6vzscfpedxr@gmail.com"}
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python (>=4.0.0.0,<5.0.0.0)"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+
+  "Intended Audience :: End Users/Desktop",
+  "Intended Audience :: Developers",
+
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+
+  "License :: OSI Approved :: Apache Software License"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

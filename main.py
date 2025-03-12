@@ -8,8 +8,10 @@ from img360_recadrer.gui import launch_ui
 
 def main():
     if len(sys.argv) == 2 and sys.argv[1] == "--help":
-        print("Usage: \npython main.py" +
-              " <pitch> <yaw> <roll> <image1_or_glob> [<image2_or_glob> ...]")
+        print(
+            "Usage: \npython main.py"
+            + " <pitch> <yaw> <roll> <image1_or_glob> [<image2_or_glob> ...]"
+        )
         print("Or with GUI: python main.py <image>")
         sys.exit(0)
 
@@ -21,13 +23,15 @@ def main():
         sys.exit(0)
 
     if len(sys.argv) < 5:
-        print("Usage: python main.py" +
-              " <pitch> <yaw> <roll> <image1_or_glob> [<image2_or_glob> ...]")
+        print(
+            "Usage: python main.py"
+            + " <pitch> <yaw> <roll> <image1_or_glob> [<image2_or_glob> ...]"
+        )
         sys.exit(1)
 
-    pitch = int(sys.argv[1]) - 180
-    yaw = int(sys.argv[2]) - 180
-    roll = int(sys.argv[3]) - 180
+    pitch = int(sys.argv[1])
+    yaw = int(sys.argv[2])
+    roll = int(sys.argv[3])
     image_patterns = sys.argv[4:]
 
     image_paths = []
