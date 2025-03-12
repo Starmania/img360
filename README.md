@@ -1,6 +1,6 @@
-# img360_recadrer
+# img360_transformer
 
-`img360_recadrer` is a Python tool for batch processing and recentering 360-degree images. It provides both a command-line interface and a graphical user interface for ease of use.
+`img360_transformer` is a Python tool for batch processing and recentering 360-degree images. It provides both a command-line interface and a graphical user interface for ease of use.
 
 ## Installation
 
@@ -69,6 +69,7 @@ If this happens on Windows, make sure you have Visual C++ redistributable 2015 i
 When running with GUI, you may encounter the following error:
 
 ```
+
 ```
 
 I don't know how to fix this yet. If you know how to fix this, please let me know.

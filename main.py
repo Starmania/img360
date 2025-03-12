@@ -2,8 +2,8 @@ import glob
 import os
 import sys
 
-from img360_recadrer.batch_process import process_image
-from img360_recadrer.gui import launch_ui
+from img360_transformer.batch_process import process_image
+from img360_transformer.gui import launch_ui
 
 
 def main():

@@ -1,7 +1,7 @@
 [project]
-name = "img360-recadrer"
+name = "img360-transformer"
 version = "0.1.0"
-description = "`img360_recadrer` is a Python tool for batch processing and recentering 360-degree images. It provides both a command-line interface and a graphical user interface for ease of use."
+description = "`img360_transformer` is a Python tool for batch processing and recentering 360-degree images. It provides both a command-line interface and a graphical user interface for ease of use."
 authors = [
     {name = "Starmania",email = "wycvhrt6vzscfpedxr@gmail.com"}
 ]
