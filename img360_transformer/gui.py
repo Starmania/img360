@@ -1,3 +1,4 @@
+
 import os
 
 import cv2
@@ -11,26 +12,26 @@ def launch_ui(image_path):
     img = cv2.imread(image_path, cv2.IMREAD_UNCHANGED)
 
     # Create a window
-    cv2.namedWindow("360° Image Rotation", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("360° Image Rotation", 1000, 500)
+    cv2.namedWindow("360 Image Rotation", cv2.WINDOW_NORMAL)
+    cv2.resizeWindow("360 Image Rotation", 1000, 500)
 
     def do_nothing(x):
         pass
 
     # Create trackbars for Roll, Pitch, and Yaw
     cv2.createTrackbar(
-        "Pitch", "360° Image Rotation", 0, 180, do_nothing
+        "Pitch", "360 Image Rotation", 0, 180, do_nothing
     )  # -180 to 180
-    cv2.setTrackbarMin("Pitch", "360° Image Rotation", -180)
+    cv2.setTrackbarMin("Pitch", "360 Image Rotation", -180)
 
-    cv2.createTrackbar("Yaw", "360° Image Rotation", 0, 180, do_nothing)  # -180 to 180
-    cv2.setTrackbarMin("Yaw", "360° Image Rotation", -180)
+    cv2.createTrackbar("Yaw", "360 Image Rotation", 0, 180, do_nothing)  # -180 to 180
+    cv2.setTrackbarMin("Yaw", "360 Image Rotation", -180)
 
-    cv2.createTrackbar("Roll", "360° Image Rotation", 0, 180, do_nothing)  # -180 to 180
-    cv2.setTrackbarMin("Roll", "360° Image Rotation", -180)
+    cv2.createTrackbar("Roll", "360 Image Rotation", 0, 180, do_nothing)  # -180 to 180
+    cv2.setTrackbarMin("Roll", "360 Image Rotation", -180)
 
     # Display the original image
-    cv2.imshow("360° Image Rotation", rotate_360_image(img, 0, 0, 0))
+    cv2.imshow("360 Image Rotation", rotate_360_image(img, 0, 0, 0))
 
     # Real-time adjustment loop
     pitch, yaw, roll = 0, 0, 0
@@ -39,14 +40,14 @@ def launch_ui(image_path):
             # Get trackbar positions
             last_pitch, last_yaw, last_roll = pitch, yaw, roll
 
-            pitch = cv2.getTrackbarPos("Pitch", "360° Image Rotation")
-            yaw = cv2.getTrackbarPos("Yaw", "360° Image Rotation")
-            roll = cv2.getTrackbarPos("Roll", "360° Image Rotation")
+            pitch = cv2.getTrackbarPos("Pitch", "360 Image Rotation")
+            yaw = cv2.getTrackbarPos("Yaw", "360 Image Rotation")
+            roll = cv2.getTrackbarPos("Roll", "360 Image Rotation")
 
             if (pitch, yaw, roll) != (last_pitch, last_yaw, last_roll):
                 # Apply transformations
                 rotated_img = rotate_360_image(img, pitch, yaw, roll)
-                cv2.imshow("360° Image Rotation", rotated_img)
+                cv2.imshow("360 Image Rotation", rotated_img)
 
             # Press 's' to save, 'q' to quit
             key = cv2.waitKey(10)
