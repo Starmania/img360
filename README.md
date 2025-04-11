@@ -67,15 +67,6 @@ ImportError: DLL load failed: The specified module could not be found.
 
 If this happens on Windows, make sure you have Visual C++ redistributable 2015 installed. If you are using older Windows version than Windows 10 and latest system updates are not installed, Universal C Runtime might be also required.
 
-### On Linux
-
-When running with GUI, you may encounter the following error:
-
-```
-cv2.error: OpenCV(4.6.0) ./modules/highgui/src/window_QT.cpp:495: error: (-27:Null pointer) NULL window handler in function 'icvFindTrackBarByName'
-```
-
-I don't know how to fix this yet. If you know how to fix this, please let me know.
 
 ## License
 
